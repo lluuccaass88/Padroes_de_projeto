@@ -1,8 +1,8 @@
-package br.com.cod3r.factory.apple.halfSimple;
+package br.com.cod3r.factory.apple.halfSimpleFactory;
 
-import br.com.cod3r.factory.apple.halfSimple.factory.IPhoneFactory;
-import br.com.cod3r.factory.apple.halfSimple.factory.IPhoneXFactory;
-import br.com.cod3r.factory.apple.halfSimple.factory.IPone11Factory;
+import br.com.cod3r.factory.apple.halfSimpleFactory.factory.IPhoneFactory;
+import br.com.cod3r.factory.apple.halfSimpleFactory.factory.IPhoneXFactory;
+import br.com.cod3r.factory.apple.halfSimpleFactory.factory.IPone11Factory;
 import br.com.cod3r.factory.apple.model.IPhone;
 
 public class Client {

@@ -1,4 +1,4 @@
-package br.com.cod3r.factory.apple.halfSimple.factory;
+package br.com.cod3r.factory.apple.halfSimpleFactory.factory;
 
 import br.com.cod3r.factory.apple.model.IPhone;
 import br.com.cod3r.factory.apple.model.IPhone11;
