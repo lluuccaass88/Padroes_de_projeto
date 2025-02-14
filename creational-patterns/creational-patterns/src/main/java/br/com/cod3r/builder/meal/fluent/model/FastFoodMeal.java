@@ -1,4 +1,4 @@
-package br.com.cod3r.builder.meal.model;
+package br.com.cod3r.builder.meal.fluent.model;
 
 public class FastFoodMeal {
 
@@ -7,8 +7,11 @@ public class FastFoodMeal {
 	private String side;
 	private String dessert;
 	private String gift;
-	
-	public String getDrink() {
+
+  public FastFoodMeal(String drink, String main, String side, String dessert, String gift) {
+  }
+
+  public String getDrink() {
 		return drink;
 	}
 
