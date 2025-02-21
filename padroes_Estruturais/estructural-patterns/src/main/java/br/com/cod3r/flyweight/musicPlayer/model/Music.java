@@ -1,57 +1,40 @@
 package br.com.cod3r.flyweight.musicPlayer.model;
 
+import br.com.cod3r.flyweight.musicPlayer.musicFlyweigth.MusicFlyweight;
+
 public class Music {
-	private String name;
-	private String artist;
-	private Integer durationInSeconds;
+
 	private Integer playerQty;
-	
-	public Music(String name, String artist, Integer durationInSeconds) {
-		this.name = name;
-		this.artist = artist;
-		this.durationInSeconds = durationInSeconds;
-		this.playerQty = 0;
-	}
-	
-	public void listenning() {
+
+  private MusicFlyweight musicFlyweight;
+
+  public Music(MusicFlyweight musicFlyweight) {
+    this.musicFlyweight = musicFlyweight;
+    this.playerQty = 0;
+  }
+
+  public void listenning() {
 		playerQty++;
 	}
 
-	public String getName() {
-		return name;
-	}
+  public MusicFlyweight getMusicFlyweight() {
+    return musicFlyweight;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public void setMusicFlyweight(MusicFlyweight musicFlyweight) {
+    this.musicFlyweight = musicFlyweight;
+  }
 
-	public String getArtist() {
-		return artist;
-	}
+  public Integer getPlayerQty() {
+    return playerQty;
+  }
 
-	public void setArtist(String artist) {
-		this.artist = artist;
-	}
+  public void setPlayerQty(Integer playerQty) {
+    this.playerQty = playerQty;
+  }
 
-	public Integer getDurationInSeconds() {
-		return durationInSeconds;
-	}
-
-	public void setDurationInSeconds(Integer durationInSeconds) {
-		this.durationInSeconds = durationInSeconds;
-	}
-
-	public Integer getPlayerQty() {
-		return playerQty;
-	}
-
-	public void setPlayerQty(Integer playerQty) {
-		this.playerQty = playerQty;
-	}
-
-	@Override
-	public String toString() {
-		return "Music [name=" + name + ", artist=" + artist + ", durationInSeconds=" + durationInSeconds
-				+ ", playerQty=" + playerQty + "]";
-	}
+  @Override
+  public String toString() {
+    return "Music [musicFlyweight=" + musicFlyweight + ", playerQty=" + playerQty + "]";
+  }
 }
