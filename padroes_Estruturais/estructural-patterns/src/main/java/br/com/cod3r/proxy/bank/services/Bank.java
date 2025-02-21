@@ -26,25 +26,25 @@ public class Bank implements BankOperations {
 				user.getName(), amount, user.getBalance()));
 	}
 
-	@Override
-	public void withdraw(Long account, String passwd, Long amount) {
-		User user = userDatabase.get(account);
-		if(user == null) {
-			System.out.println("Invalid account");
-			return;
-		}
-		if(!user.getPassword().equals(passwd)) {
-			System.out.println("Wrong password");
-			return;
-		}
-		if(user.getBalance() < amount) {
-			System.out.println("You don't have enough resources");
-			return;
-		}
-		user.setBalance(user.getBalance() - amount);
-		System.out.println(String.format("%s -%d. New Balance: %d", 
-				user.getName(), amount, user.getBalance()));
-	}
+  @Override
+  public void withdraw(Long account, String passwd, Long amount) {
+    User user = userDatabase.get(account);
+    if(user == null) {
+      System.out.println("Invalid account");
+      return;
+    }
+    if(!user.getPassword().equals(passwd)) {
+      System.out.println("Wrong password");
+      return;
+    }
+    if(user.getBalance() < amount) {
+      System.out.println("You don't have enough resources");
+      return;
+    }
+    user.setBalance(user.getBalance() - amount);
+    System.out.println(String.format("%s -%d. New Balance: %d",
+            user.getName(), amount, user.getBalance()));
+  }
 
 	@Override
 	public void changePassword(Long account, String oldPassword, String newPassword) {
