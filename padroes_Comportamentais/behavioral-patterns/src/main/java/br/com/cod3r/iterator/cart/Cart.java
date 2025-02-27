@@ -16,4 +16,5 @@ public class Cart implements Iterable<Product> {
   public Iterator<Product> iterator() {
     return products.iterator();
   }
+
 }
