@@ -2,23 +2,23 @@ package br.com.cod3r.state.pacman.states;
 
 import br.com.cod3r.state.pacman.Ghost;
 
-public class WanderMazeState implements GhostStates {
-	private static final WanderMazeState instance = new WanderMazeState();
-	private WanderMazeState() {};
-	
-	public static WanderMazeState getInstance() {
-		return instance;
-	}
+public class ChasePacmanState implements GhostStates {
+  private static final ChasePacmanState instance = new ChasePacmanState();
+  private ChasePacmanState() {};
+
+  public static ChasePacmanState getInstance() {
+    return instance;
+  }
 
   @Override
   public void spotPacman(Ghost ghost) {
-    System.out.println("I've just spot the pacman, let's chase him!");
-    ghost.setState(ChasePacmanState.getInstance());
+    System.out.println("I know, I'm already chasing him...");
   }
 
   @Override
   public void losePacman(Ghost ghost) {
-    System.out.println("How to lose what I haven't found?");
+    System.out.println("The Pacman ran away, let's find him again");
+    ghost.setState(WanderMazeState.getInstance());
   }
 
   @Override

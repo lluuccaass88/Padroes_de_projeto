@@ -10,6 +10,7 @@ public class Client {
 		Ghost ghost = new Ghost();
 
 		Game game = new Game();
+
 		game.addListener(option -> {
 			switch (option) {
 				case "1": ghost.spotPacman(); break;
